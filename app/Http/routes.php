@@ -16,10 +16,16 @@ Route::get('/', function () {
 });
 
 Route::get('/practice', function() {
-
     echo App::environment();  
-
 });
+
+
+Route::get('/books', 'BookController@getIndex');
+
+Route::get('/books/{category}', function($category) {
+        return 'Here are all the books in the category of '.$category;
+});
+
 
 /*
 |--------------------------------------------------------------------------
