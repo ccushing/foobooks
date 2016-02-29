@@ -20,6 +20,7 @@ Route::get('/practice', function() {
 });
 
 
+
 Route::get('/books', 'BookController@getIndex');
 
 Route::get('/books/{category}', function($category) {
