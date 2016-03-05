@@ -16,7 +16,15 @@ Route::get('/', function () {
 });
 
 Route::get('/practice', function() {
-    echo App::environment();  
+        $data = Array('foo' => 'bar');
+    Debugbar::info($data);
+    Debugbar::error('Error!');
+    Debugbar::warning('Watch out…');
+    Debugbar::addMessage('Another message', 'mylabel');
+
+	$random = new Rych\Random\Random();
+    return $random->getRandomString(8);
+
 });
 
 
