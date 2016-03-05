@@ -28,12 +28,14 @@ Route::get('/practice', function() {
 });
 
 
-
+Route::get('/books/title/{title?}','BookController@getTitle');
 Route::get('/books', 'BookController@getIndex');
 
 Route::get('/books/{category}', function($category) {
         return 'Here are all the books in the category of '.$category;
 });
+
+
 
 
 /*

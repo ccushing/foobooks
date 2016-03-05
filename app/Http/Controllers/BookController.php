@@ -24,6 +24,15 @@ class BookController extends Controller {
     }
 
     /**
+     * Responds to requests to GET /books/title/{title}
+     */
+    public function getTitle($title = null) {
+        return view('books.show')->with('title', $title);
+    }
+
+
+
+    /**
      * Responds to requests to GET /books/create
      */
     public function getCreate() {
